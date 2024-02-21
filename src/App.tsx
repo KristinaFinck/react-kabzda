@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+    debugger
     // полезное что-то
     // обязана вернуть JSX
     return (
@@ -10,24 +11,22 @@ function App() {
             This is APP component
             <Rating/>
             <Accordion/>
+
         </div>
     );
 }
 
 function Rating() {
+    debugger
     return (
         <div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
+            <Star/>
         </div>
     )
 }
 
 function Accordion() {
+    debugger
     return (
         <div>
             <h3> Меню</h3>
@@ -39,6 +38,19 @@ function Accordion() {
         </div>
     )
 
+}
+
+function Star() {
+    return (
+        <div>
+            <div>star</div>
+            <div>star</div>
+            <div>star</div>
+            <div>star</div>
+            <div>star</div>
+            <div>star</div>
+        </div>
+    )
 }
 
 export default App;
