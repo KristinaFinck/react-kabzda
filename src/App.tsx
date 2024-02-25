@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Rating} from "./Rating";
+import {Accordion} from "./Accordion";
 
 function App() {
     debugger
@@ -8,54 +10,30 @@ function App() {
     // обязана вернуть JSX
     return (
         <div className="App">
-            This is APP component
-            <Rating/>
-            <Accordion/>
-
+            <PageTitle title = {"This is App component"}/>
+            <PageTitle title={"My friends"} />
+            Article1
+            <Rating value = {1}/>
+            <Accordion titleValue = {"Accordion title"}/>
+            <Accordion titleValue = {"меню"}/>
+             Article2
+            <Rating value = {2} />
+            <Rating value = {3} />
+            <Rating value = {4} />
+            <Rating value = {5} />
+            <Rating value = {6} />
         </div>
     );
 }
-
-function Rating() {
-    debugger
-    return (
-        <div>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-        </div>
+function PageTitle(props: any) {
+    return(
+    <h1>{props.title}</h1>
     )
 }
 
-function Accordion() {
-    debugger
-    return (
-        <div>
-            <h3> Меню</h3>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </div>
-    )
 
-}
 
-function Star() {
-    return (
-        <div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-        </div>
-    )
-}
+
+
 
 export default App;
