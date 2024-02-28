@@ -4,9 +4,7 @@ type AccordionPropsType = {
     titleValue: string,
     collapsed: boolean
 }
-type AccordionTitlePropsType = {
-    title: string
-}
+
 type AccordionBodyPropsType = {
     collapsed: boolean
 }
@@ -25,6 +23,9 @@ export function Accordion(props:AccordionPropsType) {
            </div>
        )
    }
+}
+type AccordionTitlePropsType = {
+    title: string
 }
 function AccordionTitle(props:AccordionTitlePropsType) {
     return (
