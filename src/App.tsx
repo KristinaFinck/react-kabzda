@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Rating} from "./Rating";
-import {Accordion} from "./Accordion";
+import {Rating} from "./component/Rating";
+import {Accordion} from "./component/Accordion";
+import {Off, On, Round} from "./component/OnOff";
+
 
 function App() {
-    debugger
     // полезное что-то
     // обязана вернуть JSX
     return (
@@ -23,6 +24,9 @@ function App() {
             <Rating value = {3} />
             <Rating value = {4} />
             <Rating value = {5} />
+            <On/>
+            <Off/>
+            <Round/>
         </div>
     );
 }
