@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import {Rating} from "./component/Rating";
 import {Accordion} from "./component/Accordion";
-import {Off, On, Round} from "./component/OnOff";
+import {OnOff} from "./component/OnOff";
+
 
 
 function App() {
@@ -24,16 +25,15 @@ function App() {
             <Rating value = {3} />
             <Rating value = {4} />
             <Rating value = {5} />
-            <On/>
-            <Off/>
-            <Round/>
+            <OnOff on ={true} />
+            <OnOff on ={false} />
         </div>
     );
 }
 type PageTitlePropsType = {
     title: string
 }
-function PageTitle(props: any) {
+function PageTitle(props: PageTitlePropsType) {
     return(
     <h1>{props.title}</h1>
     )
