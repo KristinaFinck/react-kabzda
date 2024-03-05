@@ -7,8 +7,8 @@ export type OnOffPropsType = {
 export const OnOff = (props: OnOffPropsType) => {
     const onStyle = {
         display: 'inline-block',
-        width: '30px',
-        height: '30px',
+        width: '50px',
+        height: '50px',
         border: '1px solid green',
         margin: '10px',
         backgroundColor: props.on ? 'green' : 'transparent'
@@ -16,8 +16,8 @@ export const OnOff = (props: OnOffPropsType) => {
 
     const offStyle = {
         display: 'inline-block',
-        width: '30px',
-        height: '30px',
+        width: '50px',
+        height: '50px',
         border: '1px solid red',
         margin: '10px',
         backgroundColor: props.on ? 'transparent' : 'red',
@@ -25,8 +25,8 @@ export const OnOff = (props: OnOffPropsType) => {
     }
     const indicator = {
         display: 'inline-block',
-        width: '30px',
-        height: '30px',
+        width: '50px',
+        height: '50px',
         border: '1px solid black',
         borderRadius: '50%',
         margin: '10px',
