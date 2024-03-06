@@ -4,6 +4,7 @@ import './App.css';
 import {Rating} from "./component/Rating";
 import {Accordion} from "./component/Accordion";
 import {OnOff} from "./component/OnOff";
+import {UnControlledAccordion} from "./component/UnControlledAccordion";
 
 
 
@@ -29,7 +30,7 @@ function App() {
             <OnOff />
             {/*  <OnOff on ={true} />
             <OnOff on ={false} /> */}
-
+  <UnControlledAccordion titleValue={"UnControlledAccordion title"} />
         </div>
     );
 }
