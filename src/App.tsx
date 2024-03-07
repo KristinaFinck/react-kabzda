@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Rating} from "./component/Rating";
+import {Rating, ValueRatingType} from "./component/Rating";
 import {Accordion} from "./component/Accordion";
 import {OnOff} from "./component/OnOff";
 import {UnControlledAccordion} from "./component/UnControlledAccordion";
@@ -10,6 +10,8 @@ import {UnControlledRating} from "./component/UnControlledRating";
 
 
 function App() {
+
+    let[ratingValue, setRatingValue] = useState<ValueRatingType>(0);
     // полезное что-то
     // обязана вернуть JSX
     return (
@@ -17,16 +19,15 @@ function App() {
             <PageTitle title = {"This is App component"}/>
             <PageTitle title={"My friends"} />
             Article1
-            <Rating value = {1}/>
             <Accordion titleValue = {"Accordion title"} collapsed={false}/>
             <Accordion titleValue = {"меню"} collapsed={true}/>
              Article2
 
-            <Rating value = {1} />
-            <Rating value = {2} />
-            <Rating value = {3} />
-            <Rating value = {4} />
-            <Rating value = {5} />
+            <Rating value = {ratingValue} onClick = {setRatingValue}/>
+            <Rating value = {ratingValue}  onClick = {setRatingValue}/>
+            <Rating value = {ratingValue}  onClick = {setRatingValue}/>
+            <Rating value = {ratingValue}  onClick = {setRatingValue}/>
+            <Rating value = {ratingValue}  onClick = {setRatingValue}/>
             <OnOff />
             <OnOff />
             {/*  <OnOff on ={true} />
