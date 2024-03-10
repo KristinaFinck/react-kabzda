@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Rating, ValueRatingType} from "./component/Rating";
-import {Accordion} from "./component/Accordion";
+import {Accordion, AccordionBodyPropsType} from "./component/Accordion";
 import {OnOff} from "./component/OnOff";
 import {UnControlledAccordion} from "./component/UnControlledAccordion";
 import {UnControlledRating} from "./component/UnControlledRating";
@@ -12,6 +12,7 @@ import {UnControlledRating} from "./component/UnControlledRating";
 function App() {
 
     let[ratingValue, setRatingValue] = useState<ValueRatingType>(0);
+    let[collapsed, setCollapsed] = useState<boolean>(true)
     // полезное что-то
     // обязана вернуть JSX
     return (
@@ -19,8 +20,8 @@ function App() {
             <PageTitle title = {"This is App component"}/>
             <PageTitle title={"My friends"} />
             Article1
-            <Accordion titleValue = {"Accordion title"} collapsed={false}/>
-            <Accordion titleValue = {"меню"} collapsed={true}/>
+            <Accordion titleValue = {"Accordion title"} isCollapsed={collapsed} onClick = {() =>setCollapsed(!collapsed)}/>
+            <Accordion titleValue = {"меню"} isCollapsed={collapsed} onClick = {() =>setCollapsed(!collapsed)}/>
              Article2
 
             <Rating value = {ratingValue} onClick = {setRatingValue}/>
