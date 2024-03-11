@@ -33,7 +33,7 @@ function App() {
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
-            <UncontrolledOnOff />
+            <UncontrolledOnOff onChange={setSwitchOn}/> {swithcOn.toString()}
             <OnOff on = {true}
             onChange = {(on) => {setSwitchOn(on) }}/>
             {/*  <OnOff on ={true} />

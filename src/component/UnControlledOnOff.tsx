@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 export type UncontrolledOnOffPropsType = {
-    // on: boolean
+    onChange: (on: boolean) => void
 }
 
 export const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
@@ -33,10 +33,18 @@ export const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
         margin: '10px',
         backgroundColor: on ? 'green' : 'red'
     }
+    const onClicked = () => {
+        setOn(true)
+        props.onChange(true)
+    }
+    const offClicked = () => {
+        setOn(false)
+        props.onChange(false)
+    }
     return (
         <div>
-            <div style={onStyle} onClick = {()=> {setOn(true)}}>ON</div>
-            <div style={offStyle} onClick = {()=> {setOn(false)}}>OFF</div>
+            <div style={onStyle} onClick = {onClicked}>ON</div>
+            <div style={offStyle} onClick = {offClicked}>OFF</div>
             <div style={indicatorStyle}>i</div>
         </div>
     )
