@@ -6,6 +6,8 @@ import {Accordion, AccordionBodyPropsType} from "./component/Accordion";
 import {OnOff} from "./component/OnOff";
 import {UnControlledAccordion} from "./component/UnControlledAccordion";
 import {UnControlledRating} from "./component/UnControlledRating";
+import {UncontrolledOnOff} from "./component/UnControlledOnOff";
+
 
 
 
@@ -13,6 +15,7 @@ function App() {
 
     let[ratingValue, setRatingValue] = useState<ValueRatingType>(0);
     let[accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
+    let [swithcOn, setSwitchOn] = useState<boolean>(false)
     // полезное что-то
     // обязана вернуть JSX
     return (
@@ -30,8 +33,9 @@ function App() {
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
-            <OnOff />
-            <OnOff />
+            <UncontrolledOnOff />
+            <OnOff on = {true}
+            onChange = {(on) => {setSwitchOn(on) }}/>
             {/*  <OnOff on ={true} />
             <OnOff on ={false} /> */}
   <UnControlledAccordion titleValue={"UnControlledAccordion title"} />
