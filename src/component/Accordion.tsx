@@ -2,36 +2,36 @@ import React from 'react';
 import App from "../App";
 export type AccordionPropsType = {
     titleValue: string,
-    isCollapsed: boolean,
-    onClick: () => void
+    collapsed: boolean,
+    onChange: () => void
 }
 
 export type AccordionBodyPropsType = {
     collapsed: boolean
 }
 export function Accordion(props:AccordionPropsType) {
-   if (props.isCollapsed === true) {
+   if (props.collapsed === true) {
     return (
         <div>
-       <AccordionTitle  title = {props.titleValue} onClick={props.onClick}/>
+       <AccordionTitle  title = {props.titleValue} onChange={props.onChange}/>
         </div>
 )}
    else {
        return (
            <div>
-               <AccordionTitle title = {props.titleValue} onClick = {props.onClick}/>
-               <AccordionBody  collapsed = {props.isCollapsed} />
+               <AccordionTitle title = {props.titleValue} onChange = {props.onChange}/>
+               <AccordionBody  collapsed = {props.collapsed} />
            </div>
        )
    }
 }
 type AccordionTitlePropsType = {
     title: string
-    onClick: () => void
+    onChange: () => void
 }
 function AccordionTitle(props:AccordionTitlePropsType) {
     return (
-        <h3 onClick={props.onClick}>{props.title}</h3>
+        <h3 onClick={props.onChange}>{props.title}</h3>
     )
 }
 function AccordionBody(props: AccordionBodyPropsType) {

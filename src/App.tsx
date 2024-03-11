@@ -12,7 +12,7 @@ import {UnControlledRating} from "./component/UnControlledRating";
 function App() {
 
     let[ratingValue, setRatingValue] = useState<ValueRatingType>(0);
-    let[collapsed, setCollapsed] = useState<boolean>(true)
+    let[accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
     // полезное что-то
     // обязана вернуть JSX
     return (
@@ -20,9 +20,10 @@ function App() {
             <PageTitle title = {"This is App component"}/>
             <PageTitle title={"My friends"} />
             Article1
-            <Accordion titleValue = {"Accordion title"} isCollapsed={collapsed} onClick = {() =>setCollapsed(!collapsed)}/>
-            <Accordion titleValue = {"меню"} isCollapsed={collapsed} onClick = {() =>setCollapsed(!collapsed)}/>
-             Article2
+            <Accordion titleValue = {"Accordion title"}
+                       collapsed={accordionCollapsed}
+                       onChange= {() =>setAccordionCollapsed(!accordionCollapsed)}/>
+
 
             <Rating value = {ratingValue} onClick = {setRatingValue}/>
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
