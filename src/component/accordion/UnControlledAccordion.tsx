@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import App from "../App";
+import App from "../../App";
 type UnControlledAccordionPropsType = {
     titleValue: string,
    // collapsed: boolean

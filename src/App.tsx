@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Rating, ValueRatingType} from "./component/rating/Rating";
-import {Accordion, AccordionBodyPropsType} from "./component/Accordion";
+import {Accordion, AccordionBodyPropsType} from "./component/accordion/Accordion";
 import {OnOff} from "./component/onOff/OnOff";
-import {UnControlledAccordion} from "./component/UnControlledAccordion";
+import {UnControlledAccordion} from "./component/accordion/UnControlledAccordion";
 import {UnControlledRating} from "./component/rating/UnControlledRating";
 import {UncontrolledOnOff} from "./component/onOff/UnControlledOnOff";
 
