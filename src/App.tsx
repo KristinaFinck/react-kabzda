@@ -6,7 +6,7 @@ import {Accordion, AccordionBodyPropsType} from "./component/accordion/Accordion
 import {OnOff} from "./component/onOff/OnOff";
 import {UnControlledAccordion} from "./component/accordion/UnControlledAccordion";
 import {UnControlledRating} from "./component/rating/UnControlledRating";
-import {UncontrolledOnOff} from "./component/onOff/UnControlledOnOff";
+import {UnControlledOnOff} from "./component/onOff/UnControlledOnOff";
 
 
 
@@ -33,7 +33,7 @@ function App() {
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
-            <UncontrolledOnOff onChange={setSwitchOn}/> {swithcOn.toString()}
+            <UnControlledOnOff onChange={setSwitchOn}/> {swithcOn.toString()}
             <OnOff on = {true}
             onChange = {(on) => {setSwitchOn(on) }}/>
             {/*  <OnOff on ={true} />
