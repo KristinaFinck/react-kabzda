@@ -15,3 +15,13 @@ export const ControlledInput = () => {
     }
     return <input value = {value} onChange = {onChangeHandler} />
 }
+
+export const ControlledCheckbox = () => {
+    const[checkboxValue, setCheckboxValue] = useState(true);
+    const checkboxOnChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setCheckboxValue(e.currentTarget.checked)
+    }
+    return(
+        <input type = 'checkbox' checked = {checkboxValue} onChange={checkboxOnChangeHandler} />
+    )
+}
