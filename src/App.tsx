@@ -39,7 +39,7 @@ function App() {
             {/*  <OnOff on ={true} />
             <OnOff on ={false} /> */}
   <UnControlledAccordion titleValue={"UnControlledAccordion title"} />
-            <UnControlledRating />
+            <UnControlledRating  onChange={x=> x}/>
         </div>
     );
 };
