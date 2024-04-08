@@ -21,7 +21,10 @@ export const ControlledCheckbox = () => {
     const checkboxOnChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCheckboxValue(e.currentTarget.checked)
     }
+    //вместо коллбека можно поставить action
+    //checkbox отличается от инпута значением "checked"
     return(
         <input type = 'checkbox' checked = {checkboxValue} onChange={checkboxOnChangeHandler} />
     )
 }
+
