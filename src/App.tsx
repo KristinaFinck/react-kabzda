@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Rating, ValueRatingType} from "./component/rating/Rating";
-import {Accordion, AccordionBodyPropsType} from "./component/accordion/Accordion";
+import {Accordion, AccordionPropsType} from "./component/accordion/Accordion";
 import {OnOff} from "./component/onOff/OnOff";
 import {UnControlledAccordion} from "./component/accordion/UnControlledAccordion";
 import {UnControlledRating} from "./component/rating/UnControlledRating";
@@ -25,9 +25,11 @@ function App() {
             Article1
             <Accordion titleValue = {"Accordion title"}
                        collapsed={accordionCollapsed}
-                       onChange= {() =>setAccordionCollapsed(!accordionCollapsed)}/>
+                       onChange= {() =>setAccordionCollapsed(!accordionCollapsed)}
+            items={[{ title: 'Item 1', value: 1 }, { title: 'Item 2', value: 2 }]} // Пример items
+            onClick={(value:any) => console.log(value)} // Пример обработчика onClick
 
-
+/>
             <Rating value = {ratingValue} onClick = {setRatingValue}/>
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
             <Rating value = {ratingValue}  onClick = {setRatingValue}/>
