@@ -28,16 +28,4 @@ export const ControlledCheckbox = () => {
     )
 }
 
-export const ControlledSelect = () => {
-    const [value, setValue] = useState<string | undefined>('none');
-    const onChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setValue(e.currentTarget.value)
-    }
-    return (
-        <select value={value} onChange={onChangeHandler}>
-            <option value = {'none'}>none</option>
-            <option value={'1'}>Minsk</option>
-            <option value={'2'}>Kyiv</option>
-        </select>
-    )
-}
+

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Rating, ValueRatingType} from "./component/rating/Rating";
 import {Accordion, AccordionPropsType} from "./component/accordion/Accordion";
@@ -7,6 +6,7 @@ import {OnOff} from "./component/onOff/OnOff";
 import {UnControlledAccordion} from "./component/accordion/UnControlledAccordion";
 import {UnControlledRating} from "./component/rating/UnControlledRating";
 import {UnControlledOnOff} from "./component/onOff/UnControlledOnOff";
+import {Select} from "./component/select/Select";
 
 
 
@@ -42,6 +42,7 @@ function App() {
             <OnOff on ={false} /> */}
   <UnControlledAccordion titleValue={"UnControlledAccordion title"} />
             <UnControlledRating  onChange={x=> x}/>
+            <Select />
         </div>
     );
 };
@@ -53,11 +54,7 @@ function PageTitle(props: PageTitlePropsType) {
     return(
     <h1>{props.title}</h1>
     )
+
 }
-
-
-
-
-
 
 export default App;
