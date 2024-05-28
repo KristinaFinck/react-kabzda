@@ -6,7 +6,7 @@ export default {
 
 const NewMessagesCounter = (props: any) => {
     return <div>{props.count}</div>
-}cd
+}
 const UsersSecret = (props: {users: Array<string>}) => { // создали тип прямо внутри
     return (
         <div>{
